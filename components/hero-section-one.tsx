@@ -42,7 +42,11 @@ export default function HeroSection() {
                   </p>
 
                   <div className="flex items-center gap-3">
-                    <Button asChild size="lg" className="pr-4.5">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="pr-4.5 bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600"
+                    >
                       <Link href="#link">
                         <span className="text-nowrap">Get Started</span>
                         <ChevronRight className="opacity-50" />
@@ -53,10 +57,10 @@ export default function HeroSection() {
                       asChild
                       size="lg"
                       variant="outline"
-                      className="pl-5"
+                      className="pl-5 hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300"
                     >
                       <Link href="#link">
-                        <CirclePlay className="fill-primary/25 stroke-primary" />
+                        <CirclePlay className="fill-primary/25 stroke-primary group-hover:stroke-white group-hover:fill-white/25" />
                         <span className="text-nowrap">Watch video</span>
                       </Link>
                     </Button>
