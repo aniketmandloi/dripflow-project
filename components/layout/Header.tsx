@@ -61,13 +61,17 @@ export const Header = () => {
             >
               Blog
             </Link>
+          </div>
+
+          {/* Right Side Actions */}
+          <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <Button variant="ghost" className="font-medium">
               Sign In
             </Button>
             <Button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 shadow-lg">
               Get Started
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
 
@@ -128,7 +132,7 @@ export const Header = () => {
                 </Button>
                 <Button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700">
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
             </div>
