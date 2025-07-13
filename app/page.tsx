@@ -9,8 +9,6 @@ import {
   Shield,
   BarChart3,
   Sparkles,
-  Menu,
-  X,
   Globe,
   Clock,
   Award,
@@ -25,113 +23,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { NewsletterModal } from "@/components/NewsletterModal";
 import { useState } from "react";
 
 const Page = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent">
-                DripFlow
-              </span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#features"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-              >
-                Features
-              </a>
-              <a
-                href="#pricing"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-              >
-                Pricing
-              </a>
-              <a
-                href="#testimonials"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-              >
-                Reviews
-              </a>
-              <ThemeToggle />
-              <Button variant="ghost" className="font-medium">
-                Sign In
-              </Button>
-              <Button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 shadow-lg">
-                Get Started
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="md:hidden flex items-center space-x-2">
-              <ThemeToggle />
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                {mobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </Button>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-border/50">
-              <div className="flex flex-col space-y-4 pt-4">
-                <a
-                  href="#features"
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                >
-                  Features
-                </a>
-                <a
-                  href="#pricing"
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                >
-                  Pricing
-                </a>
-                <a
-                  href="#testimonials"
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                >
-                  Reviews
-                </a>
-                <div className="flex flex-col space-y-2 pt-2">
-                  <Button variant="ghost" className="justify-start">
-                    Sign In
-                  </Button>
-                  <Button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700">
-                    Get Started
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/5 to-transparent" />
