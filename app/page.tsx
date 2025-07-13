@@ -25,6 +25,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { NewsletterModal } from "@/components/NewsletterModal";
 import { useState } from "react";
+import { NewsletterGallery } from "@/components/NewsletterGallery";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -249,6 +250,9 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Gallery Section */}
+      <NewsletterGallery />
 
       {/* Social Proof */}
       <section id="testimonials" className="py-20 md:py-32 bg-accent/5">

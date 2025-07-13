@@ -9,8 +9,11 @@ interface BlogPostPageProps {
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+// Make the component async
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  // Await the params
+  const { slug } = await Promise.resolve(params);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -40,6 +43,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               alt={post.title}
               fill
               className="object-cover"
+              priority
             />
           </div>
 
@@ -51,10 +55,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               application, this would be populated with the actual blog post
               content from your CMS or database.
             </p>
-            {/* Add more mock content here */}
           </div>
         </article>
       </div>
     </div>
   );
+}
+
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
 }
