@@ -52,14 +52,14 @@ export const Header = () => {
               Pricing
             </Link>
             <Link
-              href="/#testimonials"
+              href="/blog"
               className={`transition-colors font-medium ${
-                isActive("/#testimonials")
+                isActive("/blog")
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Reviews
+              Blog
             </Link>
             <ThemeToggle />
             <Button variant="ghost" className="font-medium">
@@ -113,14 +113,14 @@ export const Header = () => {
                 Pricing
               </Link>
               <Link
-                href="/#testimonials"
+                href="/blog"
                 className={`transition-colors font-medium ${
-                  isActive("/#testimonials")
+                  isActive("/blog")
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Reviews
+                Blog
               </Link>
               <div className="flex flex-col space-y-2 pt-2">
                 <Button variant="ghost" className="justify-start">
